@@ -60,8 +60,32 @@ header hr {
 
 .post {
     border-radius: 4px;
-    background-color: #cdcdcd;
-    padding: 8px;
+    background-color: #fff;
+    padding-top: 8px;
+}
+
+.to-do .post{
+    border: 2px solid #ffa500;
+}
+
+.to-do .post hr {
+    background-color: #ffa500;
+}
+
+.doing .post{
+    border: 2px solid #004187;
+}
+
+.doing .post hr {
+    background-color: #004187;
+}
+
+.done .post{
+    border: 2px solid #008714;
+}
+
+.done .post hr {
+    background-color: #008714;
 }
 
 .post h4 {
@@ -75,4 +99,29 @@ header hr {
 }
 
 .post p {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
 }
+
+.rodape {
+    margin-right: -2px;
+}
+.time {
+    padding: 0;
+}
+
+.rodape h5 {
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0195A5;
+    border-radius: 4px;
+    padding: 2px 3px;
+    margin-right: 2px;
+    color: #fff;
+}
+
+
+
+
+
+
