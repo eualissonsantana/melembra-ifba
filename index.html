@@ -5,26 +5,53 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Montserrat&display=swap" rel="stylesheet">
         <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-            <section class="imagem d-flex justify-content-center">
-                <picture>
-                    <img src="img/alisson.jpeg" width="80px">
-                </picture>
-            </section>
-            <section class="header-titulo d-flex justify-content-center">
-                <article class="name">
-                    <h2>Alisson Santana</h2>
-                    <hr>
-                </article>
-            </section>
-            
+            <nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-between">
+                <section class="container collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav" id="menu">
+                        <a class="nav-item nav-link active" href="#">Sobre <span class="sr-only">(Página atual)</span></a>
+                        <a class="nav-item nav-link" href="#">Categorias</a>
+                    </div>
+                </section>
+
+                <section class="container d-flex justify-content-center">    
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </section>
+
+                <section class="row container d-flex justify-content-end">
+                    <section class="imagem">
+                        <img src="img/alisson.jpeg" width="40px">     
+                    </section>
+                    <section class="opcoes row">
+                        <button type="button" class="btn btn-outline-light" id="perfil">Perfil</button>
+                        <button type="button" class="btn btn-outline-light" id="sair">Sair</button>
+                    </section>
+                </section>
+            </nav>
         </header>
         <!--FIM HEADER-->
+
+
         <section class="container-fluid box-geral">
+            <section class="row d-flex justify-content-init">
+                <article class="btn-tarefa">
+                        <button type="button" class="btn btn-outline-dark" id="btn-categorias">Categoria</button>
+                    <button type="button" class="btn btn-outline-dark" id="btn-tarefas">Tarefas</button>
+                </article>
+            </section>
+
+            
             <article class="row">
                 <section class="container box tarefas-do-dia">
+                    
                     <section class="titulo-box">
                         <h3>Para hoje</h3>
                         <hr>
@@ -69,7 +96,7 @@
 
                 </section>
 
-                <section class="container box doing">
+                <section class="container box doing" id="box-doing">
                     <section class="titulo-box">
                         <h3>Fazendo</h3>
                         <hr>
@@ -114,5 +141,6 @@
                 </section>
             </article>
         </section>
+    <script src="js/script.js"></script>
     </body>
 </html>

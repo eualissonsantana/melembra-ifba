@@ -1,17 +1,36 @@
 body {
-    background-color: #0195A5;
+    background-image: url(img/capa-formanda-organizacao.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-img    {
+img {
     border-radius: 50%;
     margin-top: 10px;
     margin-bottom: 0px;
 }
 
 header {
-    height: 100px;
-    margin-bottom: 60px;
+    background: #1B676B;
+}
+
+#menu {
+    margin-left: 15px;
+}
+
+.opcoes {
+    margin: 15px 35px 0 20px;
+}
+
+.opcoes .btn {
+    width: 70px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+#sair {
+    margin-left: 5px;
 }
 
 .name {
@@ -31,19 +50,41 @@ header hr {
 }
 
 .box-geral {
-    padding: 50px;
+    padding: 10px 50px;
+}
+
+.titulo {
+    margin-bottom: 10px;
+}
+
+.btn-tarefa .btn {
+    margin: 0 0 10px 5px;
+    font-size: 18px;
+    background: rgb(226, 228, 230, 0.8);
+    color: #1B676B;
+    width: 160px;
+    border: none;
+}
+
+#btn-tarefas {
+    margin-left: 10px;
+}
+
+.texto h1 {
+    font-size: 40px;
+}
+
+.btn-tarefa {
+    margin-left: 10px;
 }
 
 .box {
     min-height: 600px;
     border-radius: 8px;
-    background-color: #e9e9e9;
     width: 23%;
+    background: rgb(105, 105, 105, 0.8);
 }
 
-.posts {
-    background-color: #ffffff;
-}
 
 .titulo-box {
     margin-top: 20px;
@@ -60,33 +101,11 @@ header hr {
 
 .post {
     border-radius: 4px;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     padding-top: 8px;
+    box-shadow: 0 0 1em #000000;
 }
 
-.to-do .post{
-    border: 2px solid #ffa500;
-}
-
-.to-do .post hr {
-    background-color: #ffa500;
-}
-
-.doing .post{
-    border: 2px solid #004187;
-}
-
-.doing .post hr {
-    background-color: #004187;
-}
-
-.done .post{
-    border: 2px solid #008714;
-}
-
-.done .post hr {
-    background-color: #008714;
-}
 
 .post h4 {
     font-size: 18px;
@@ -103,9 +122,11 @@ header hr {
     line-height: 1.2;
 }
 
+
 .rodape {
     margin-right: -2px;
 }
+
 .time {
     padding: 0;
 }
@@ -113,7 +134,7 @@ header hr {
 .rodape h5 {
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
-    background-color: #0195A5;
+    background-color: #1B676B;
     border-radius: 4px;
     padding: 2px 3px;
     margin-right: 2px;
