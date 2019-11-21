@@ -1,5 +1,5 @@
 body {
-    background-image: url(img/capa-formanda-organizacao.webp);
+    background-image: url(img/laranja.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     font-family: 'Josefin Sans', sans-serif;
@@ -27,6 +27,7 @@ header {
     width: 70px;
     padding: 0;
     vertical-align: middle;
+    border-radius: 2px;
 }
 
 #sair {
@@ -60,10 +61,10 @@ header hr {
 .btn-tarefa .btn {
     margin: 0 0 10px 5px;
     font-size: 18px;
-    background: rgb(226, 228, 230, 0.8);
-    color: #1B676B;
-    width: 160px;
+    background-color: rgb(0, 0, 0, 0.6);
     border: none;
+    color: #fff;
+    width: 160px;
 }
 
 #btn-tarefas {
@@ -82,7 +83,7 @@ header hr {
     min-height: 600px;
     border-radius: 8px;
     width: 23%;
-    background: rgb(105, 105, 105, 0.8);
+    background-color: rgb(0, 0, 0, 0.6);
 }
 
 
@@ -92,18 +93,20 @@ header hr {
 
 .titulo-box h3 {
     font-size: 24px;
+    color: #fff;
 }
 
 .titulo-box hr {
     margin-top: 0px;
-    background-color: #0195A5;
+    background-color: #fff;
 }
 
 .post {
     border-radius: 4px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 0.7);
     padding-top: 8px;
     box-shadow: 0 0 1em #000000;
+    margin-bottom: 10px;
 }
 
 
@@ -120,6 +123,7 @@ header hr {
 .post p {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.2;
+    font-size: 13px;
 }
 
 
@@ -135,7 +139,7 @@ header hr {
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     background-color: #1B676B;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 2px 3px;
     margin-right: 2px;
     color: #fff;
