@@ -1,3 +1,3 @@
-console.log(
-    document.getElementById("box-doing")
-)
+$("#btn-mensagem").click(function(){
+    $("#modal-mensagem").modal();
+});
