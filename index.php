@@ -1,3 +1,5 @@
+<?php include("conexao.php"); ?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -67,12 +69,12 @@
                     </div>
                     
                     <div class="modal-body">
-                        <form action="php-action/create-categoria.php" method="POST">
+                        <form action="insere-categoria.php" method="POST">
                         <div class="form-group">    
                             <label for="exampleInputPassword1">Nome</label>
                             <input type="text" class="form-control" name="descricao"  placeholder="Ex: Estudo">
                         </div>
-                        <button type="submit" class="btn btn-primary" >Salvar mudanças</button>
+                        <button type="submit" class="btn btn-primary">Salvar mudanças</button>
                         </form>
                 
                     </div>
@@ -93,7 +95,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="php-action/metodos/create-tarefa" method="POST">
+                        <form action="insere-tarefa.php" method="POST">
                             <div class="form-group">
                                 <label for="name">Título</label>
                                 <input type="titulo" name="titulo" class="form-control" id="titulo-tarefa">
@@ -105,22 +107,43 @@
                             <div class="form-row">
                                 <div class="col">
                                     <label for="name">Categoria</label>
-                                    <select class="form-control">
-                                        <option>Selecione categoria</option>
+                                    <select name="fk_categoria" class="form-control">
+                                    <?php
+	                                    $resultado = $con->query("SELECT * FROM categorias");
+
+					                    foreach($resultado as $linha){
+				                    ?>	
+                                            <option value="<?php echo $linha["id_categoria"];?>" ><?php 	echo $linha["descricao"] ?></option>
+                                    <?php
+                                    }
+                                    ?>
                                     </select>   
                                 </div>
                                 <div class="col">
                                     <label for="data">Data</label>
                                     <div class="input-group date">
-                                        <input type="text" name="data" class="form-control" id="calendario">
+                                        <input type="text" name="dia" class="form-control" id="calendario">
                                         <div class="input-group-addon">
                                             <ion-icon name="apps"></ion-icon>
                                         </div>
                                     </div>  
                                 </div>
                             </div>
-
-                            <button type="submit" class="btn btn-primary" >Salvar mudanças</button>
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="time">Hora</label>
+                                    <div class="input-group date">
+                                        <input type="time" name="hora" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="time">Quadro</label>
+                                    <div class="input-group date">
+                                        <input type="number" name="fk_quadro" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar</button>
                         </form>
                     </div>
                     </div>
@@ -135,35 +158,10 @@
                         <h3>Para hoje</h3>
                         <hr>
                     </section>
+                    
+                    
+                    
 
-                    <!--POSTS-->
-                    <article class="post container-fluid">
-                        <h4>Aula Programação Web</h4>
-                        <hr>
-                        <p>Entregar atividade referente ao projeto final</p>
-                        <section class="row rodape d-flex justify-content-end">
-                            <article class="time ">
-                                <h5 id="data">14/11/2019</h5>
-                            </article>
-                            <article class="time ">
-                                <h5>15:10h</h5>
-                            </article>
-                        </section>
-                    </article>
-
-                    <article class="post container-fluid">
-                        <h4>Aula Programação Web</h4>
-                        <hr>
-                        <p>Entregar atividade referente ao projeto final</p>
-                        <section class="row rodape d-flex justify-content-end">
-                            <article class="time ">
-                                <h5 id="data">14/11/2019</h5>
-                            </article>
-                            <article class="time ">
-                                <h5>15:10h</h5>
-                            </article>
-                        </section>
-                    </article>
                 </section>
 
                 <section class="container box to-do">
@@ -171,50 +169,41 @@
                         <h3>Para fazer</h3>
                         <hr>
                     </section>
-
+                    <?php
+                            $resultado = $con->query("SELECT * FROM tarefas WHERE fk_quadro = 2");
+                            
+                            foreach($resultado as $post){
+                        ?>                   
                     <!--POSTS-->
                     <article class="post container-fluid">
-                        <h4>Aula Programação Web</h4>
+                        
+                        <article class="row d-flex">
+                            <div class="col-8">
+                                <h4><?php echo $post["titulo"]; ?></h4>
+                            </div>
+                            <div class="col-4">
+                                <div class="icones row">
+                                    <div class="">
+                                        <a class="icon" href=""><img src="img/icons/edit-file.png" width="25"></a>
+                                    </div>
+                                    <div class="">
+                                        <a class="icon" href=""><img src="img/icons/remove-file.png" width="25"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                         <hr>
-                        <p>Entregar atividade referente ao projeto final</p>
+                        <p><?php echo $post["descricao"];?></p>
                         <section class="row rodape d-flex justify-content-end">
                             <article class="time ">
-                                <h5 id="data">14/11/2019</h5>
+                                <h5 id="data"><?php echo $post["dia"];?></h5>
                             </article>
                             <article class="time ">
-                                <h5>15:10h</h5>
+                                <h5><?php echo $post["hora"];?></h5>
                             </article>
                         </section>
                     </article>
-
-                    <article class="post container-fluid">
-                        <h4>Aula Programação Web</h4>
-                        <hr>
-                        <p>Entregar atividade referente ao projeto final</p>
-                        <section class="row rodape d-flex justify-content-end">
-                            <article class="time ">
-                                <h5 id="data">14/11/2019</h5>
-                            </article>
-                            <article class="time ">
-                                <h5>15:10h</h5>
-                            </article>
-                        </section>
-                    </article>
-
-                    <article class="post container-fluid">
-                        <h4>Aula Programação Web</h4>
-                        <hr>
-                        <p>Entregar atividade referente ao projeto final</p>
-                        <section class="row rodape d-flex justify-content-end">
-                            <article class="time ">
-                                <h5 id="data">14/11/2019</h5>
-                            </article>
-                            <article class="time ">
-                                <h5>15:10h</h5>
-                            </article>
-                        </section>
-                    </article>
-
+                    <?php } ?>
                 </section>
 
                 <section class="container box doing" id="box-doing">
@@ -224,19 +213,7 @@
                     </section>
 
                     <!--POSTS-->
-                    <article class="post container-fluid">
-                        <h4>Aula Programação Web</h4>
-                        <hr>
-                        <p>Entregar atividade referente ao projeto final</p>
-                        <section class="row rodape d-flex justify-content-end">
-                            <article class="time ">
-                                <h5 id="data">14/11/2019</h5>
-                            </article>
-                            <article class="time ">
-                                <h5>15:10h</h5>
-                            </article>
-                        </section>
-                    </article>
+                   
                 </section>
 
                 <section class="container box done">
@@ -246,22 +223,9 @@
                     </section>
 
                     <!--POSTS-->
-                    <article class="post container-fluid">
-                        <h4>Aula Programação Web</h4>
-                        <hr>
-                        <p>Entregar atividade referente ao projeto final</p>
-                        <section class="row rodape d-flex justify-content-end">
-                            <article class="time ">
-                                <h5 id="data">14/11/2019</h5>
-                            </article>
-                            <article class="time ">
-                                <h5>15:10h</h5>
-                            </article>
-                        </section>
-                    </article>
+                    
                 </section>
             </article>
         </section>
-
     </body>
 </html>

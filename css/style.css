@@ -1,17 +1,17 @@
 body {
-    background-image: url(../img/laranja.jpg);
+    background-color: #00abe8;
     background-repeat: no-repeat;
     background-size: 100%;
 } 
 
-img {
+.imagem img {
     border-radius: 50%;
     margin-top: 10px;
     margin-bottom: 0px;
 }
 
 header {
-    background: #1B676B;
+    background: #073561;
 }
 
 #menu {
@@ -60,7 +60,7 @@ header hr {
 .btn-tarefa .btn {
     margin: 0 0 10px 5px;
     font-size: 18px;
-    background-color: rgb(0, 0, 0, 0.6);
+    background-color: rgb(0, 0, 0, 0.4);
     border: none;
     color: #fff;
     width: 160px;
@@ -105,7 +105,15 @@ header hr {
     background-color: rgb(255, 255, 255, 0.7);
     padding-top: 8px;
     box-shadow: 0 0 1em #000000;
-    margin-bottom: 10px;
+    margin: 10px 0;
+}
+
+.post .icones {
+    margin-left: 10px;
+}
+
+.post .icon {
+    margin: 0 3px;
 }
 
 
@@ -123,6 +131,7 @@ header hr {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.2;
     font-size: 13px;
+    text-align: justify;
 }
 
 
@@ -137,7 +146,7 @@ header hr {
 .rodape h5 {
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
-    background-color: #1B676B;
+    background-color: #073561;
     border-radius: 2px;
     padding: 2px 3px;
     margin-right: 2px;
