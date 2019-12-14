@@ -1,5 +1,5 @@
 body {
-    background-color: #00abe8;
+    background-image: url('../img/background-roxo.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
 } 
@@ -8,10 +8,6 @@ body {
     border-radius: 50%;
     margin-top: 10px;
     margin-bottom: 0px;
-}
-
-header {
-    background: #073561;
 }
 
 #menu {
@@ -63,7 +59,7 @@ header hr {
     background-color: rgb(0, 0, 0, 0.4);
     border: none;
     color: #fff;
-    width: 160px;
+    width: 140px;
 }
 
 #btn-tarefas {
@@ -82,7 +78,7 @@ header hr {
     min-height: 600px;
     border-radius: 8px;
     width: 23%;
-    background-color: rgb(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 
@@ -102,7 +98,7 @@ header hr {
 
 .post {
     border-radius: 4px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255, 0.9);
     padding-top: 8px;
     box-shadow: 0 0 1em #000000;
     margin: 10px 0;
@@ -153,6 +149,13 @@ header hr {
     color: #fff;
 }
 
+table thead {
+    background-color: #800080;
+}
+
+#btn-categoria {
+    background-color: #800080;
+}
 
 
 

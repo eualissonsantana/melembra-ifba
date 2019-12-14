@@ -1,60 +1,51 @@
-body{
-    background-image: url(../img/oraganizacao-01.jpg);
+body {
+    background-image: url('../img/background-roxo.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
-    
-}
+} 
 
-#tela-inicial::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #00c6fb;
-    background: -webkit-linear-gradient(bottom, #800080, #da33da);
-    background: -o-linear-gradient(bottom, #800080, #be5dbe);
-    background: -moz-linear-gradient(bottom, #800080, #be5dbe);
-    background: linear-gradient(bottom, #800080, #be5dbe);
-    opacity: 0.8;
-}
-
-#tela-inicial{
-    margin:  100px 0;
-}
-
-#tela-inicial h1 {
+#tela-inicial {
+    margin-top: 120px;
     color: #fff;
-    font-size: 70px;
-}
-
-#tela-inicial p {
-    color: #fff;
-    font-size: 20px;
     text-align: center;
-    line-height: 1.2;
 }
 
-#tela-inicial .descricao {
-    margin-top: 30px;
-}
-
-.botoes {
-    margin: 30px 200px;
+.logo {
+    margin-bottom: 40px;
 }
 
 .botoes .btn {
-    width: 440px;
-    padding: 15px 0;
-    background-color: #1B676B;
+    width: 300px;
+    padding: 10px 0;
+    font-size: 18px;
+    background-color: rgb(0, 0, 0, 0.4);
     border: none;
-    font-size: 22px;
+    color: #fff;
 }
-<= ----------- --> 
 
+/*----- formulario usuarios ---- -- */
 
+.secao-cadastro {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.form {
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 4px;
+    color: #fff;
+    padding: 15px;
+    padding-bottom: 0;
+    
+}
+
+.form .btn {
+    width: 100%;
+}
+
+.form h2 {
+    margin-bottom: 30px;
+}
 
