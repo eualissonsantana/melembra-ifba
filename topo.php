@@ -1,4 +1,5 @@
 <?php 
+date_default_timezone_set('America/Sao_Paulo');
 include("cabecalho.php");
 include("conexao.php");
 ?>

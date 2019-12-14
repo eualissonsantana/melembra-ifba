@@ -1,5 +1,6 @@
 <?php 
     include("topo.php");
+    $today = date("Y-m-d");
 ?>
 
 
@@ -30,7 +31,7 @@
             </section>
 
             <?php
-                    $resultado = $con->query("SELECT * FROM tarefas WHERE fk_usuario = '$id_usuario'");
+                    $resultado = $con->query("SELECT * FROM tarefas WHERE fk_usuario = '$id_usuario' and dia = '$today' and etapa = 'agendado'");
                     
                     foreach($resultado as $post){
                 ?>                   
@@ -56,7 +57,7 @@
                 <p><?php echo $post["descricao"];?></p>
                 <section class="row rodape d-flex justify-content-end">
                     <article class="time ">
-                        <h5 id="data"><?php echo $post["dia"];?></h5>
+                        <h5 id="data"><?php echo date('d-m-Y', strtotime($post['dia']));?></h5>
                     </article>
                     <article class="time ">
                         <h5><?php echo $post["hora"];?></h5>
@@ -72,7 +73,7 @@
                 <hr>
             </section>
             <?php
-                    $resultado = $con->query("SELECT * FROM tarefas WHERE fk_usuario = '$id_usuario'");
+                    $resultado = $con->query("SELECT * FROM tarefas WHERE fk_usuario = '$id_usuario' and etapa = 'agendado'");
                     
                     foreach($resultado as $post){
                 ?>                   
@@ -98,7 +99,7 @@
                 <p><?php echo $post["descricao"];?></p>
                 <section class="row rodape d-flex justify-content-end">
                     <article class="time ">
-                        <h5 id="data"><?php echo $post["dia"];?></h5>
+                        <h5 id="data"><?php echo date('d-m-Y', strtotime($post['dia']));?></h5>
                     </article>
                     <article class="time ">
                         <h5><?php echo $post["hora"];?></h5>
@@ -115,7 +116,7 @@
             </section>
 
             <?php
-                    $resultado = $con->query("SELECT * FROM tarefas WHERE fk_usuario = '$id_usuario'");
+                    $resultado = $con->query("SELECT * FROM tarefas WHERE fk_usuario = '$id_usuario' and etapa = 'fazendo' ");
                     
                     foreach($resultado as $post){
                 ?>                   
@@ -141,7 +142,7 @@
                 <p><?php echo $post["descricao"];?></p>
                 <section class="row rodape d-flex justify-content-end">
                     <article class="time ">
-                        <h5 id="data"><?php echo $post["dia"];?></h5>
+                        <h5 id="data"><?php echo date('d-m-Y', strtotime($post['dia']));?></h5>
                     </article>
                     <article class="time ">
                         <h5><?php echo $post["hora"];?></h5>
@@ -158,7 +159,7 @@
             </section>
 
             <?php
-                    $resultado = $con->query("SELECT * FROM tarefas WHERE fk_usuario = '$id_usuario'");
+                    $resultado = $con->query("SELECT * FROM tarefas WHERE fk_usuario = '$id_usuario' and etapa = 'feito'");
                     
                     foreach($resultado as $post){
                 ?>                   
@@ -183,7 +184,7 @@
                 <p><?php echo $post["descricao"];?></p>
                 <section class="row rodape d-flex justify-content-end">
                     <article class="time ">
-                        <h5 id="data"><?php echo $post["dia"];?></h5>
+                        <h5 id="data"><?php echo date('d-m-Y', strtotime($post['dia']));?></h5>
                     </article>
                     <article class="time ">
                         <h5><?php echo $post["hora"];?></h5>

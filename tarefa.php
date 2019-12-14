@@ -49,8 +49,23 @@
                             <input type="time" name="hora" class="form-control">
                         </div>
                     </div>
+                    <div class="col status">
+                        <div class="row">
+                            <label>Status da tarefa</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="etapa" id="inlineRadio1" value="fazendo">
+                            <label class="form-check-label" for="inlineRadio1">Fazendo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="etapa" id="inlineRadio2" value="feito">
+                            <label class="form-check-label" for="inlineRadio2">Feito</label>
+                        </div>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Salvar</button>
+                <div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
             </form>
         </div>
         </div>
