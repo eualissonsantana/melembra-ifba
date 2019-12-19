@@ -7,14 +7,18 @@ include("conexao.php");
     <header>
         <?php 
             session_start();
-            $nome = $_SESSION['nome'];
-            $id_usuario = $_SESSION['id_usuario'];
+            if(isset($_SESSION['nome']) && !empty($_SESSION['nome'])){
+                $nome = $_SESSION['nome'];
+                $id_usuario = $_SESSION['id_usuario'];
+            }else {
+                header('Location: form-login.php');
+            }
+            
         ?>
         <nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-between">
             <section class="container collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" id="menu">
-                    <a class="nav-item nav-link active" href="#">Sobre <span class="sr-only">(Página atual)</span></a>
-                    
+                    <a type="button" class="btn btn-outline-light" href="#">Sobre <span class="sr-only">(Página atual)</span></a>
                 </div>
             </section>
 
@@ -24,15 +28,20 @@ include("conexao.php");
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </section>
-
-            <section class="row container d-flex justify-content-end">
-                <section class="opcoes row">
-                    <h4><?php echo ($_SESSION['nome']);?></h4> 
-                </section>
+                <section class="session-user row container d-flex justify-content-end">
+                <?php 
+                    $resultado = $con->query("SELECT imagem FROM usuario WHERE id_usuario = '$id_usuario'");
+                    foreach($resultado as $post){
+                ?>
                 <section class="imagem">
-                    <img src="img/alisson.jpeg" width="40px">     
+                    <img src="img/users/<?php echo $id_usuario?>/<?php echo $post['imagem']?>" width="40px" height="40px">     
                 </section>
+                <section class="sair">
+                    <a type="button" href="logout.php" class="btn btn-outline-light" >Sair</a>
+                </section>
+                    <?php } ?>
             </section>
+            
         </nav>
     </header>
     <!--FIM HEADER-->

@@ -1,3 +1,25 @@
+<script>
+
+function validar() {
+    if (document.formTarefa.titulo.value==""){
+        alert('Informe o titulo');
+		document.formTarefa.titulo.focus();
+		return false;
+	}else if (document.formTarefa.dia.value==""){
+        alert("Informe a data");
+		document.formTarefa.dia.focus();
+		return false;
+	}else if (document.formTarefa.hora.value==""){
+		alert("Informe o horário da tarefa");
+		document.formTarefa.hora.focus();
+		return false;
+	}else {
+	
+	return true; }
+}
+
+</script>
+
 <div class="modal fade " id="ModalTarefas" tabindex="-1" role="dialog" aria-labelledby="nova-tarefa" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -8,7 +30,7 @@
             </button>
         </div>
         <div class="modal-body">
-            <form action="insere-tarefa.php" method="POST">
+            <form name="formTarefa" onSubmit="return validar();" action="insere-tarefa.php" method="POST">
                 <div class="form-group">
                     <label for="name">Título</label>
                     <input type="titulo" name="titulo" class="form-control" id="titulo-tarefa">
@@ -63,9 +85,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <button type="submit" class="btn btn-primary">Salvar</button>
-                </div>
+                <button type="submit" id="btn-tarefa" class="btn btn-primary">Salvar</button>
             </form>
         </div>
         </div>

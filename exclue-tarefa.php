@@ -15,7 +15,7 @@ $stmt->execute();
 <html>
 <body>
      <script>
-	 	location.href='./index.php';
+	 	location.href='./kamban.php';
      </script>
 </body>
 </html>

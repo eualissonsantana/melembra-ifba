@@ -1,13 +1,27 @@
+@font-face {
+    font-family:ohnow;
+    src: url('../fontes/Birdrockers_Demo.otf');
+}
+
 body {
     background-image: url('../img/background-roxo.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
 } 
 
+#logo {
+    font: 50px ohnow;
+}
+
+.imagem {
+    display: flex;
+}
+
 .imagem img {
     border-radius: 50%;
     margin-top: 10px;
     margin-bottom: 0px;
+    object-fit: cover;
 }
 
 #menu {
@@ -15,7 +29,7 @@ body {
 }
 
 .opcoes {
-    margin: 15px 35px 0 20px;
+    margin: 15px 15px 0 20px;
 }
 
 .opcoes .btn {
@@ -43,6 +57,29 @@ body {
 header hr {
     width: 100%;
     background-color: #ffffff;
+}
+
+nav .btn {
+    background-color: rgb(0, 0, 0, 0.4);
+    border: none;
+    color: #fff;
+    width: 70px;
+}
+
+#btn-sair {
+    color: #fff;
+}
+
+.session-user {
+    margin-right: 30px;
+}
+
+#nome-user {
+    color: #fff;
+}
+
+.sair{
+    margin-left: 20px;
 }
 
 .box-geral {
@@ -75,10 +112,13 @@ header hr {
 }
 
 .box {
-    min-height: 600px;
+    min-height: 200px;
     border-radius: 8px;
     width: 23%;
     background-color: rgba(0, 0, 0, 0.4);
+    padding-bottom: 10px;
+    max-height: 500px;
+    overflow: auto;
 }
 
 
@@ -94,6 +134,12 @@ header hr {
 .titulo-box hr {
     margin-top: 0px;
     background-color: #fff;
+}
+
+.no-task {
+    color: #fff;
+    font-size: 20px;
+    margin: 50px 0 0 20px;
 }
 
 .post {
@@ -145,19 +191,103 @@ header hr {
     background-color: #073561;
     border-radius: 2px;
     padding: 2px 3px;
-    margin-right: 2px;
+    color: #fff;
+    margin-right: 3px;
+}
+
+#data {
+    margin-left: 5px;
+}
+
+#modalCategoria table thead {
+    background-color: #800080;
+}
+
+#btn-categoria, #btn-tarefa {
+    background-color: #800080;
+    border: none;
+}
+
+#btn-tarefa {
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+/* -------------------------------------------------------- */
+
+#tela-inicial {
+    margin-top: 120px;
+    color: #fff;
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 40px;
+}
+
+.botoes .btn {
+    width: 300px;
+    padding: 10px 0;
+    font-size: 18px;
+    background-color: rgb(0, 0, 0, 0.4);
+    border: none;
     color: #fff;
 }
 
-table thead {
-    background-color: #800080;
+/*----- formulario usuarios ---- -- */
+
+.secao-cadastro {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#btn-categoria {
-    background-color: #800080;
+.edita-tarefa {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.edita-tarefa .btn {
+    margin-top: 20px;
+    width: 100%;
+}
 
+.secao-cadastro .form, .edita-tarefa .form {
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 4px;
+    color: #fff;
+    padding: 15px;
+    padding-bottom: 0;
+    
+}
 
+.secao-cadastro .form .btn {
+    width: 100%;
+}
 
+.secao-cadastro .form h2 {
+    margin-bottom: 30px;
+}
 
+#sem-conta {
+    margin-top: 10px;
+    color: #fff;
+}
+
+.secao-cadastro-erro placeholder {
+    color: red;
+}
+
+.fixaRodape {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}

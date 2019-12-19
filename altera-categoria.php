@@ -7,7 +7,8 @@
     
     $stmt = $con->prepare("UPDATE categorias SET descricao=? WHERE id_categoria =?");
     $stmt->bindParam(1,$descricao);
-    $stmt->bindParam(1,$id_categoria);
+    $stmt->bindParam(2,$id_categoria);
     $stmt->execute();
     
+    header('Location: kamban.php');
 ?>

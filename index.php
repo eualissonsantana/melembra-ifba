@@ -18,22 +18,13 @@
 
         <article class="container col-10 descricao justify-content-center">
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Donec a congue lacus. Integer sed libero eu elit rutrum dignissim. 
-            Praesent eget elit at erat elementum maximus. Sed fermentum est ut 
-            massa efficitur pellentesque. Nulla sollicitudin pellentesque ante,
-            et eleifend diam feugiat vitae. Maecenas dapibus sem eu massa mollis
-            ultricies. In hac habitasse platea dictumst. Aliquam erat volutpat. 
-            Pellentesque tincidunt sodales libero, in dapibus nulla lobortis sit 
-            amet. Nam pharetra dui lacinia, maximus urna ac, ornare nunc. Duis 
-            iaculis est sed orci ultrices, sit amet venenatis ante sollicitudin. 
-            Nam eu ornare felis. Donec vel ornare eros.
+            É um projeto solicitado pelo professor Rabelo e válido como nota para a disciplina de programação
+            web, do curso de bacharelado em Sistemas de Informação. 
 
-            Maecenas tincidunt pellentesque dapibus. Maecenas in fringilla ex. 
-            Maecenas ullamcorper felis orci, at lobortis lacus pulvinar a. 
-            Vivamus a finibus nibh. Fusce fermentum augue nec aliquam euismod. 
-            Nam dignissim elit maximus, dapibus ipsum vel, lacinia neque. 
-            Vivamus vel mi turpis. Morbi sodales neque tortor, et. 
+            O site consiste basicamente em um sistema que gere as tarefas do dia a dia, baseada no modelo Kanban.
+            É possivel cadastrar atividades que são divididas em 4 estágios: Para hoje, Para fazer, Fazendo e Feito.
+            <br><br>
+            Para utilizar o sistema é necessário criar uma conta e logo depois logar.
             </p>
         </article>
 

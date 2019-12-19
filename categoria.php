@@ -1,3 +1,17 @@
+<script>
+
+function validar() {
+    if (document.formCategoria.descricao.value==""){
+        alert('Informe o nome da categoria');
+		document.formUser.descricao.focus();
+		return false;
+	}else {
+	
+	return true; }
+}
+
+</script>
+
 <div class="modal fade bd-example-modal-lg" id="ModalCategoria" tabindex="-1" role="dialog" aria-labelledby="nova-categoria" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg " role="document">
         <div class="modal-content">
@@ -28,7 +42,7 @@
                         <td>
                             <div class="icones row">
                                 <div class="">
-                                    <a class="icon" href=""><img src="img/icons/edit-file.png" width="25"></a>
+                                    <a class="icon" href="edita-categoria.php?id_categoria=<?php echo $categoria["id_categoria"] ?>"><img src="img/icons/edit-file.png" width="25"></a>
                                 </div>
                                 <div class="">
                                     <a class="icon" href="exclue-categoria.php?id_categoria=<?php echo $categoria["id_categoria"] ?>"><img src="img/icons/remove-file.png" width="25"></a>
@@ -44,7 +58,7 @@
         
         <div class="modal-body">
         <h5 class="title" id="nova-categoria">Cadastre uma nova categoria</h5>
-            <form action="insere-categoria.php" method="POST">
+            <form name="formCategoria" onSubmit="return validar();" action="insere-categoria.php" method="POST">
             <div class="form-group">    
                 <label for="exampleInputPassword1">Nome</label>
                 <input type="text" class="form-control" name="descricao"  placeholder="Ex: Estudo">

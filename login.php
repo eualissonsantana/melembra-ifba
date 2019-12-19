@@ -22,6 +22,7 @@ $select = $con->query("select * from usuario where email = '$email' and senha = 
 foreach($select as $user){
     $nome = $user['nome'];
     $id_usuario = $user['id_usuario']; 
+    $imagem = $user['imagem'];
 }
 
 
@@ -30,6 +31,7 @@ $rows = $resultado->rowCount();
 if($rows != 0){
     $_SESSION['nome'] = $nome;
     $_SESSION['id_usuario'] = $id_usuario;
+    $_SESSION['imagem'] = $imagem;
     header('Location: kamban.php');
     exit();
 }else {

@@ -8,9 +8,14 @@
     $data = str_replace("/", "-", $_POST["dia"]);
     $dia = date('Y-m-d', strtotime($data));
     $hora = $_POST["hora"];
-    $etapa = $_POST["etapa"];
     $fk_categoria = $_POST["fk_categoria"];
     $fk_usuario = $_SESSION['id_usuario'];
+
+    if(!isset($_POST["etapa"])){
+        $etapa = "agendado";
+    }else {
+        $etapa = $_POST["etapa"];
+    }
     
     
     $stmt = $con->prepare("INSERT INTO tarefas(titulo, descricao, dia, hora, etapa, fk_categoria, fk_usuario) VALUES (?,?,?,?,?,?,?)");

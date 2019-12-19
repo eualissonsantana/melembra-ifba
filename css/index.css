@@ -1,3 +1,9 @@
+@font-face {
+    font-family:ohnow;
+    src: url('../fontes/Birdrockers_Demo.otf');
+}
+
+
 body {
     background-image: url('../img/background-roxo.jpg');
     background-repeat: no-repeat;
@@ -47,5 +53,13 @@ body {
 
 .form h2 {
     margin-bottom: 30px;
+}
+
+.logo h1{
+    font: 80px ohnow;
+}
+
+p {
+    font-size: 20px;
 }
 
